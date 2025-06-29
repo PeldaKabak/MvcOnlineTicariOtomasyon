@@ -7,14 +7,15 @@ using System.Web;
 
 namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
-    public class Kategori
+    public class Departman
     {
         [Key]
-        public int KategoriID { get; set; }
+        public int DepartmanID { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string KategoriAd { get; set; }
+        public string DepartmanAd { get; set; } 
 
-        public ICollection<Urun> Uruns  { get; set; }
+        public ICollection<Personel> Personels { get; set; } // Bir departmanda birden fazla personel olabilir, ilişkilendirme yapıldı
+
     }
 }

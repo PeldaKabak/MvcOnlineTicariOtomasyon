@@ -7,26 +7,21 @@ using System.Web;
 
 namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
-    public class Urun
+    public class Personel
     {
         [Key]
-        public int UrunID { get; set; }
+        public int PersonelID { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string UrunAd { get; set; }
-
+        public string PersonelAd { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string Marka { get; set; }
-        public short Stok { get; set; }
-        public decimal AlisFiyati { get; set; }
-        public decimal SatisFiyati { get; set; }
-        public bool Durum { get; set; }
+        public string PersonelSoyad { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(250)]
-        public string UrunGorsel { get; set; }  
+        public string PersonelGorsel { get; set; }
 
-        public Kategori Kategori { get; set; }
         public ICollection<SatisHareket> SatisHarekets { get; set; }
+        public Departman Departman { get; set; }
     }
 }
