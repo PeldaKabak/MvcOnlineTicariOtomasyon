@@ -9,9 +9,9 @@
 <table class=" table table-bordered" style="margin-top:20px">
     <tr>
         <th>ID</th>
-        <th>Kategori Adı</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
+        <th>KATEGORİ ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
     </tr>
     @foreach (var k in Model)
     {
@@ -19,7 +19,7 @@
             <td>@k.KategoriID</td>
             <td>@k.KategoriAd</td>
             <td><a href="/Kategori/KategoriSil/@k.KategoriID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Kategori/KategoriGetir/@k.KategoriID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Kategori/KategoriGetir/@k.KategoriID" class="btn btn-warning">Güncelle</a></td>
         </tr>
     }
 

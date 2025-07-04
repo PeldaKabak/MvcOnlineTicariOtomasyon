@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using MvcOnlineTicariOtomasyon.Models.Siniflar;
+
 namespace MvcOnlineTicariOtomasyon.Controllers
 {
     public class KategoriController : Controller

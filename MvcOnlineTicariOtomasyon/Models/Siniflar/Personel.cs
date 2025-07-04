@@ -22,6 +22,8 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public string PersonelGorsel { get; set; }
 
         public ICollection<SatisHareket> SatisHarekets { get; set; }
-        public Departman Departman { get; set; }
+
+        public int DepartmanID { get; set; } // Foreign key for Departman
+        public virtual Departman Departman { get; set; }
     }
 }

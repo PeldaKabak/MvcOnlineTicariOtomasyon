@@ -13,7 +13,8 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public int DepartmanID { get; set; }
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
-        public string DepartmanAd { get; set; } 
+        public string DepartmanAd { get; set; }
+        public bool Durum { get; set; }
 
         public ICollection<Personel> Personels { get; set; } // Bir departmanda birden fazla personel olabilir, ilişkilendirme yapıldı
 
