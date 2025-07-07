@@ -18,7 +18,9 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public int UrunAdet { get; set; } 
         public decimal BirimFiyat { get; set; } 
         public decimal Tutar { get; set; }
-        
+
+        public bool Durum { get; set; }
+
         public virtual Faturalar Faturalar { get; set; } // Fatura ile ilişkilendirme   
     }
 }

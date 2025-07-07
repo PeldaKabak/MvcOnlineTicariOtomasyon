@@ -16,5 +16,6 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public string KategoriAd { get; set; }
 
         public ICollection<Urun> Uruns  { get; set; }
+        public bool Durum { get; set; }
     }
 }

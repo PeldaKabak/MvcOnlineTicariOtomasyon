@@ -33,6 +33,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         [HttpPost]
         public ActionResult YeniUrun(Urun u)
         {
+            u.Durum = true;
             c.Uruns.Add(u); // Adding a new product to the database
             c.SaveChanges(); // Saving changes to the database
             return RedirectToAction("Index"); // Redirecting to the Index action to display the updated list of products    

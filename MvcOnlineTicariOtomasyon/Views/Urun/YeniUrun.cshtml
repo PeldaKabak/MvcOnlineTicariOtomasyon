@@ -23,9 +23,6 @@
     @Html.LabelFor(x => x.SatisFiyati)
     @Html.TextBoxFor(x => x.SatisFiyati, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Durum)
-    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
-    <br />
     @Html.LabelFor(x => x.Kategori)
     @Html.DropDownListFor(x=>x.KategoriID,(List<SelectListItem>)ViewBag.UrunKategori,new {@class="form-control"})
     @*@Html.TextBoxFor(x => x.KategoriID, new { @class = "form-control" })*@

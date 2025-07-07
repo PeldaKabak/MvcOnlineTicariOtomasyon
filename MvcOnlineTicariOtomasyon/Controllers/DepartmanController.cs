@@ -25,6 +25,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         [HttpPost]
         public ActionResult DepartmanEkle(Departman d)
         {
+            d.Durum = true; // Set the status to true when adding a new department
             c.Departmans.Add(d);
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -33,7 +34,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public ActionResult DepartmanSil (int id)
         {
             var departman = c.Departmans.Find(id);
-           departman.Durum = false;
+            departman.Durum = false;
             c.SaveChanges();
             return RedirectToAction("Index");
         }

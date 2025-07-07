@@ -26,7 +26,8 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public virtual Urun Urun { get; set; }
         public virtual Cariler Cariler { get; set; }
         public virtual Personel Personel { get; set; }
-       
-        
+        public bool Durum { get; set; } // Indicates if the sale is active or not
+
+
     }
 }

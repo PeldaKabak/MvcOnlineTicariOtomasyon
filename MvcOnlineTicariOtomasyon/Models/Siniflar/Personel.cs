@@ -25,5 +25,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 
         public int DepartmanID { get; set; } // Foreign key for Departman
         public virtual Departman Departman { get; set; }
+
+        public bool Durum { get; set; }
     }
 }

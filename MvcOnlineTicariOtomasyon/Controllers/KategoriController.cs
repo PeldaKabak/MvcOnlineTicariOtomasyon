@@ -15,7 +15,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Kategoris.ToList();
+            var degerler = c.Kategoris.Where(x => x.Durum == true).ToList();
             return View(degerler);
         }
         [HttpGet]
@@ -26,6 +26,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         [HttpPost]
         public ActionResult KategoriEkle(Kategori k)
         {
+            k.Durum = true; // Assuming you want to set the status to true when adding a new category
             c.Kategoris.Add(k);
             c.SaveChanges();
             return RedirectToAction("Index");
@@ -33,7 +34,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
         public ActionResult KategoriSil ( int id)
         {
             var ktg = c.Kategoris.Find(id);
-            c.Kategoris.Remove(ktg);
+            ktg.Durum = false; // Soft delete by setting the status to false
             c.SaveChanges();
             return RedirectToAction("Index");
         }

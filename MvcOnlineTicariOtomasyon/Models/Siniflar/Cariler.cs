@@ -13,11 +13,11 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         public int CariID { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30 ,ErrorMessage ="En fazla 30 karakter girebilirsiniz!")]
         public string CariAd { get; set; }
 
         [Column(TypeName = "Varchar")]
-        [StringLength(30)]
+        [StringLength(30, ErrorMessage = "En fazla 30 karakter girebilirsiniz!")]
         public string CariSoyad { get; set; }
 
         [Column(TypeName = "Varchar")]
@@ -26,7 +26,10 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 
         [Column(TypeName = "Varchar")]
         [StringLength(50)]
+        [Required(ErrorMessage = "Bu alanı boş geçemezsiniz!")]
         public string CariMail { get; set; }
+
+        public bool Durum { get; set; }
 
         public ICollection<SatisHareket> SatisHarekets { get; set; }
     }

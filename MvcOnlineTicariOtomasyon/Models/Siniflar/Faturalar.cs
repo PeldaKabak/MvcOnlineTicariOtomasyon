@@ -30,6 +30,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [Column(TypeName = "Varchar")]
         [StringLength(30)]
         public string FaturaTeslimAlan { get; set; }
+        public bool Durum { get; set; }
 
         public ICollection<FaturaKalem> FaturaKalems { get; set; } //birden fazla kalemi olabilir ilişkilendirmesi
     }
